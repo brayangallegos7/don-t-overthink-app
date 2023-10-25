@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="tituloBg">contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-avatar class="imgPerfil">
+      <img alt="Silhouette of a person's head" src="assets/img/brayan.jpg" />
+    </ion-avatar>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-input label="Nombre:" value="Brayan Yahir Gallegos Estrada " [readonly]="true"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input label="Edad:" value="24 años" [readonly]="true"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input label="Correo:" type="email" placeholder="email@domain.com"></ion-input>
+        </ion-item>    
+        <ion-item>
+          <ion-input label="Telefono:" type="tel" placeholder="888-888-8888"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </ion-card>
+ 
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <a href='https://www.facebook.com/brayan.gallegos.7771'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.instagram.com/bgallegossss/'><ion-icon name="logo-instagram" style="color:hotpink"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.linkedin.com/in/brayan-yahir-gallegos-estrada-2950aa273/'><ion-icon name="logo-linkedin" style="color:midnightblue"></ion-icon></a>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home"></ion-icon>
+          inicio
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/noticias']">
+          <ion-icon name="newspaper"></ion-icon>
+          noticias
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/tienda']">
+          <ion-icon name="cart"></ion-icon>
+          tienda
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/acerca']">
+          <ion-icon name="information"></ion-icon>
+          acerca
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/contacto']">
+          <ion-icon name="call"></ion-icon>
+          contacto
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

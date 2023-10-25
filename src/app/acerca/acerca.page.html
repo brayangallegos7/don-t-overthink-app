@@ -1,0 +1,193 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="tituloBg">acerca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img class="imgBg" src="assets/img/TituloDOT.png" />
+    <ion-card-header>
+      <ion-item>
+        <ion-icon 
+        name="logo-amplify"
+        item-start
+        style="color:sienna">  
+        </ion-icon>
+        Genero: 
+        <ion-badge item-end> Acción</ion-badge>
+      </ion-item>
+      
+      <ion-item>
+      <ion-icon 
+      name="golf"
+      item-start
+      style="color :orangered">  
+      </ion-icon>
+      Niveles:
+      <ion-badge item-end>3</ion-badge>
+      </ion-item>
+      
+      <ion-item>
+      <ion-icon 
+      name="rocket"
+      item-start
+      style="color :rgb(53, 13, 13)">  
+      </ion-icon>
+      Lanzamiento:
+      <ion-badge item-end>2024</ion-badge>
+      </ion-item>
+      
+      <ion-item>
+      <ion-icon 
+      name="desktop"
+      item-start
+      style="color : silver">  
+      </ion-icon>
+      Plataforma de Desarrollo:
+      <ion-badge item-end>Unity 5</ion-badge>
+      </ion-item>
+      
+      <ion-item>
+      <ion-icon 
+      name="accessibility"
+      item-start
+      style="color :darksalmon">  
+      </ion-icon>
+      Edades:
+      <ion-badge item-end>+8</ion-badge>
+      </ion-item>
+      
+      <ion-item>
+      <ion-icon 
+      name="clipboard"
+      item-start
+      style="color :burlywood">  
+      </ion-icon>
+      Calificación:
+      <ion-badge item-end>9</ion-badge>
+      </ion-item>
+      
+      <ion-item>
+      <ion-icon 
+      name="logo-twitter"
+      item-start
+      style="color :deepskyblue">  
+      </ion-icon>
+      Seguidores:
+      <ion-badge item-end>20k</ion-badge>
+      </ion-item>
+    </ion-card-header>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title class="tituloapp">Don't Overthink</ion-card-title>
+      <ion-card-subtitle class="subtituloapp">Conoce mas acerca del equipo de Don´t Overthink</ion-card-subtitle>
+    <ion-card-header>
+      <ion-chip [routerLink]="['/perfil-jd']">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="assets/img/juan.jpg" />
+        </ion-avatar>
+        <ion-label>Juan Diego Gonzalez Miramontes</ion-label>
+      </ion-chip>
+      <ion-card-subtitle  class="subtituloapp1">Desarrollador Front-end</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-chip [routerLink]="['/perfil-bg']">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="assets/img/brayan.jpg" />
+        </ion-avatar>
+        <ion-label>Brayan Yahir Gallegos Estrada</ion-label>
+      </ion-chip>
+      <ion-card-subtitle class="subtituloapp1">Desarrollador Full-Stack</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-chip [routerLink]="['/perfil-jc']">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="assets/img/julian1.jpg" />
+        </ion-avatar>
+        <ion-label>Julian Carrillo Mayorga </ion-label>
+      </ion-chip>
+      <ion-card-subtitle class="subtituloapp1">Lider de Proyecto</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-chip [routerLink]="['/perfil-jt']">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="assets/img/jesus.jpg" />
+        </ion-avatar>
+        <ion-label> Jose de Jesus Trasloscheros</ion-label>
+      </ion-chip>
+      <ion-card-subtitle  class="subtituloapp1">Desarrollador Backend</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <a href='https://www.facebook.com/'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.youtube.com/'><ion-icon name="logo-youtube" style="color:red"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.github.com/'><ion-icon name="logo-github" style="color:gray"></ion-icon></a>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home"></ion-icon>
+          inicio
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/noticias']">
+          <ion-icon name="newspaper"></ion-icon>
+          noticias
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/tienda']">
+          <ion-icon name="cart"></ion-icon>
+          tienda
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/acerca']">
+          <ion-icon name="information"></ion-icon>
+          acerca
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/contacto']">
+          <ion-icon name="call"></ion-icon>
+          contacto
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

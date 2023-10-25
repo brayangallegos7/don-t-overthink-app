@@ -1,0 +1,146 @@
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<body>
+    <!-- <h2>Bienvenido a Don´t Overthink</h2> -->
+    <div class="container-form sign-up" id="signupModal">
+       <!--  <div class="welcome-back">
+            <div class="message">
+               
+                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                <button class="sign-up-btn">Iniciar Sesion</button>
+            </div>
+        </div> -->
+        <form class="formulario" id="signup-form">
+            <div>
+                <img src="assets/img/TituloDOT.png" />
+            </div>
+            
+            <p class="cuenta-gratis">Crea una cuenta para poder tener acceso a todas las funciones de Don´t Overthink</p>
+            <div class="iconos">
+                <div class="border-icon" id="googleLogin">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <div class="border-icon" id="githubLogin">
+                    <i class='bx bxl-github' ></i>
+                </div>
+                <div class="border-icon" id="facebookLogin">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div> 
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <div>
+                <input type="text" id="signup-email" class="form-control mb-3" placeholder="Correo electronico" required>
+            <input type="password" id="signup-password" class="form-control mb-3" placeholder="Contraseña" required>
+            <button type="submit" text="Iniciar Sesión" >Iniciar Sesión</button>
+             </div>
+            
+        </form>
+    </div>
+   <!--   <div class="container-form sign-in" id="signinModal">
+        <form class="formulario" id="login-form">
+            <h2 class="create-account">Iniciar Sesion</h2>
+            <div class="iconos">
+                <div class="border-icon" id="googleLogin">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <div class="border-icon" id="githubLogin">
+                    <i class='bx bxl-github' ></i>
+                </div>
+                <div class="border-icon" id="facebookLogin">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div> 
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <input type="text" id="login-email" class="form-control mb-3" placeholder="Email" required>
+            <input type="password" id="login-password" class="form-control mb-3" placeholder="Contraseña" required>
+            <button type="submit" text="Iniciar Sesión" class="btn-close btn-close-white">Iniciar Sesión</button>
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aun no tienes una cuenta por favor registrate aqui</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+    </div> -->
+</body>
+    
+    
+      
+
+
+  
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<body>
+    <!-- <h2>Bienvenido a Don´t Overthink</h2> -->
+    <div class="container-form sign-up" id="signupModal">
+       <!--  <div class="welcome-back">
+            <div class="message">
+               
+                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                <button class="sign-up-btn">Iniciar Sesion</button>
+            </div>
+        </div> -->
+        <form class="formulario" id="signup-form">
+            <div>
+                <img [routerLink]="['/landing']" src="assets/img/TituloDOT.png" />
+            </div>
+            
+            <h2 class="create-account">Iniciar sesión</h2>
+            <div class="iconos">
+                <div class="border-icon" id="googleLogin">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <div class="border-icon" id="githubLogin">
+                    <i class='bx bxl-github' ></i>
+                </div>
+                <div class="border-icon" id="facebookLogin">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div> 
+            <p class="cuenta-gratis">Si ya tienes una cuenta por favor inicia sesion aqui</p>
+            <div>
+                <input type="text" id="signup-email" class="form-control mb-3" placeholder="Correo electronico" required>
+            <input type="password" id="signup-password" class="form-control mb-3" placeholder="Contraseña" required>
+            <ion-chip [routerLink]="['/reset-password']" color="light">¿Olvidaste la contraseña?</ion-chip>
+            
+            <button [routerLink]="['/inicio']" type="submit" text="Iniciar Sesión" >Iniciar Sesión</button>
+             </div>
+            
+        </form>
+    </div>
+   <!--   <div class="container-form sign-in" id="signinModal">
+        <form class="formulario" id="login-form">
+            <h2 class="create-account">Iniciar Sesion</h2>
+            <div class="iconos">
+                <div class="border-icon" id="googleLogin">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <div class="border-icon" id="githubLogin">
+                    <i class='bx bxl-github' ></i>
+                </div>
+                <div class="border-icon" id="facebookLogin">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div> 
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <input type="text" id="login-email" class="form-control mb-3" placeholder="Email" required>
+            <input type="password" id="login-password" class="form-control mb-3" placeholder="Contraseña" required>
+            <button type="submit" text="Iniciar Sesión" class="btn-close btn-close-white">Iniciar Sesión</button>
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aun no tienes una cuenta por favor registrate aqui</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+    </div> -->
+</body>
+    
+    
+      
+
+
+  

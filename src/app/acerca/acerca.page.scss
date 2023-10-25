@@ -1,0 +1,86 @@
+.imgBg{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.tituloBg{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  font-size: x-large;
+  text-align:center;
+  color: white;
+}
+
+ion-toolbar {
+    --background: white;
+    --color: black;
+  
+    --min-height: 80px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+  }
+  ion-item{
+    font-family: garena;
+    font-weight: bold;
+    
+  }
+  ion-badge{
+    font-family: garena;
+    font-weight: bold;
+    
+  }
+  .redesfb{
+    color: dodgerblue;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .redesfb:hover{
+    transform: scale(1.1);
+  }
+  .redeslk{
+    color: midnightblue;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .redeslk:hover{
+    transform: scale(1.1);
+  }
+  .redesig{
+    color: palevioletred;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .redesig:hover{
+    transform: scale(1.1);
+  }
+  .tituloapp{
+    font-family: garena-bold;
+    font-size: 40px;
+    text-align:center;
+    color: black;
+  }
+  .subtituloapp{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+    text-align:center;
+  }
+  ion-chip{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+    text-align:center;
+  }
+
+  .subtituloapp1{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+  }

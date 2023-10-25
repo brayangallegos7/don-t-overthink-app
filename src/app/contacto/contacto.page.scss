@@ -1,0 +1,57 @@
+.tituloBg{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    text-align:center;
+    color: white;
+  }
+  .imgPerfil{
+      width: 300px;
+      height: 300px;
+      display:block;
+      margin:auto;
+  }
+  ion-input{
+      margin-left: 30px;
+      font-family: garena;
+      font-weight: bold;
+      font-style: italic;
+  }
+  .redesfb{
+      color: dodgerblue;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .redesfb:hover{
+      transform: scale(1.1);
+    }
+    .redeslk{
+      color: midnightblue;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .redeslk:hover{
+      transform: scale(1.1);
+    }
+    .redesig{
+      color: palevioletred;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .redesig:hover{
+      transform: scale(1.1);
+    }
+    ion-toolbar {
+      --background: white;
+      --color: black;
+      --min-height: 80px;
+      --padding-top: 5px;
+      --padding-bottom: 5px;
+    }

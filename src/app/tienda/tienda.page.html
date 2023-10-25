@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="tituloBg">tienda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img class="imgBg" src="assets/img/tienda.jpg" />
+    <ion-card-header>
+      <ion-card-title class="cardTitle">Nueva mercancia</ion-card-title>
+      <ion-card-subtitle class="cardsubTitle">Viste a la moda con lo nuevo de Don´t Overthink</ion-card-subtitle>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/tienda1.jpg" />
+          </ion-thumbnail>
+          <ion-label>Audifonos Don´t Overthink<br>$ 1299.00</ion-label>
+          <ion-button  fill="outline">
+            <ion-icon slot="start" name="cart"></ion-icon>
+            Comprar
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/tienda2.jpg" />
+          </ion-thumbnail>
+          <ion-label>Sudadera Don´t Overthink <br>$ 1099.00</ion-label>
+          <ion-button  fill="outline">
+            <ion-icon slot="start" name="cart"></ion-icon>
+            Comprar
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/tienda3.jpg" />
+          </ion-thumbnail>
+          <ion-label>Playera Don´t Overthink <br> $ 999.00</ion-label>
+          <ion-button  fill="outline">
+            <ion-icon slot="start" name="cart"></ion-icon>
+            Comprar
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/producto4.jpeg" />
+          </ion-thumbnail>
+          <ion-label>NFS <br> $ 799.00</ion-label>
+          <ion-button  fill="outline">
+            <ion-icon slot="start" name="cart"></ion-icon>
+            Comprar
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/producto5.jpg" />
+          </ion-thumbnail>
+          <ion-label>Crew <br> $ 599.00</ion-label>
+          <ion-button  fill="outline">
+            <ion-icon slot="start" name="cart"></ion-icon>
+            Comprar
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+   
+  </ion-card>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <a href='https://www.facebook.com/'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.youtube.com/'><ion-icon name="logo-youtube" style="color:red"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.github.com/'><ion-icon name="logo-github" style="color:gray"></ion-icon></a>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home"></ion-icon>
+          inicio
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/noticias']">
+          <ion-icon name="newspaper"></ion-icon>
+          noticias
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/tienda']">
+          <ion-icon name="cart"></ion-icon>
+          tienda
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/acerca']">
+          <ion-icon name="information"></ion-icon>
+          acerca
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/contacto']">
+          <ion-icon name="call"></ion-icon>
+          contacto
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,126 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-button [routerLink]="['/login']">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="tituloBg">Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-avatar class="imgPerfil">
+      <img alt="Silhouette of a person's head" src="assets/img/juan.jpg" />
+    </ion-avatar>
+    <ion-card-header>
+      <ion-card-title class="cardTitle">juan Diego Gonzalez Miramontes</ion-card-title>
+      <ion-card-subtitle class="cardSubtitle">Soy estudiante de Ingeniería en Desarrollo y Gestión de Software en la Universidad Tecnológica de Nayarit, cuento con un título de TSU en Tecnologías de la Información Área Desarrollo de Software Multiplataforma. Actualmente me encuentro cursando la carrera de Ingenieria en Desarrollo y Gestión de Software. 
+        </ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-item>
+        <ion-icon 
+        name="calendar"
+        item-start
+        style="color :steelblue">  
+        </ion-icon>
+        Edad
+      </ion-item>
+      <ion-card-subtitle class="cardSubtitle">25 Años</ion-card-subtitle>
+
+      <ion-item>
+        <ion-icon 
+        name="diamond"
+        item-start
+        style="color :silver">  
+        </ion-icon>
+        Aptitudes
+      </ion-item>
+      <ion-card-subtitle class="cardSubtitle">Resolución de problemas • Liderazgo • Trabajo en equipo • Creatividad • Flexibilidad </ion-card-subtitle>
+  
+      <ion-item>
+        <ion-icon 
+        name="trophy"
+        item-start
+        style="color :goldenrod">  
+        </ion-icon>
+        Habilidades
+      </ion-item>
+      <ion-card-subtitle class="cardSubtitle">•	HTML
+        •	CSS
+        •	Bootstrap
+        •	JavaScript
+        •	GitHub
+        •	C#
+        •	Git
+        •	Ionic
+        •	MySQL
+        </ion-card-subtitle>
+      <ion-item>
+        <ion-icon 
+        name="id-card"
+        item-start
+        style="color :rgb(110, 71, 42)">  
+        </ion-icon>
+        Experiencia
+      </ion-item>
+      <ion-card-subtitle class="cardSubtitle">Desarrollador • Desarrollador de Software Multiplataforma</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <a href='https://www.facebook.com/diego.miramontes.524'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.instagram.com/juandiegogm.24/'><ion-icon name="logo-instagram" style="color:hotpink"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a href='https://www.linkedin.com/in/gonz%C3%A1lez-miramontes-juan-diego-711a1b211/'><ion-icon name="logo-linkedin" style="color:midnightblue"></ion-icon></a>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home"></ion-icon>
+          inicio
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/noticias']">
+          <ion-icon name="newspaper"></ion-icon>
+          noticias
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/tienda']">
+          <ion-icon name="cart"></ion-icon>
+          tienda
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/acerca']">
+          <ion-icon name="information"></ion-icon>
+          acerca
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/contacto']">
+          <ion-icon name="call"></ion-icon>
+          contacto
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+

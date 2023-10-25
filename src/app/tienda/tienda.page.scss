@@ -1,0 +1,55 @@
+
+.imgBg{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+};
+
+
+.tituloBg{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  font-size: x-large;
+  text-align:center;
+  color: white;
+}
+
+ion-toolbar {
+    --background: white;
+    --color: black;
+  
+    --min-height: 80px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+  }
+  .cardTitle{
+    font-family: garena-bold;
+    font-size: 40px;
+    text-align:center;
+    color: black;
+  }
+  .cardsubTitle{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+  }
+  ion-button:hover{
+    transform: scale(1.1);
+  }
+  img{
+    width: 50px;
+    height: 70px;
+  }
+  ion-label{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+  }
+  ion-button{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+  }
+ 
