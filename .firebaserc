@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dont-overthink-app": {
+      "hosting": {
+        "app": [
+          "dont-overthink-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dont-overthink-app"
+  }
+}
