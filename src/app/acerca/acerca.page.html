@@ -19,7 +19,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-card>
-    <img class="imgBg" src="assets/img/TituloDOT.png" />
+    <img class="imgBg" src="assets/img/dot1.png" />
     <ion-card-header>
       <ion-item>
         <ion-icon 
@@ -157,6 +157,9 @@
       </ion-fab-button>
       <ion-fab-button>
         <a href='https://www.github.com/'><ion-icon name="logo-github" style="color:gray"></ion-icon></a>
+      </ion-fab-button>
+      <ion-fab-button>
+        <a [routerLink]="['/location']"><ion-icon name="logo-google" style="color:gray"></ion-icon></a>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>

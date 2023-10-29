@@ -1,16 +1,8 @@
-<link rel="stylesheet"
+<!-- <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 <body>
-    <!-- <h2>Bienvenido a Don´t Overthink</h2> -->
-    <div class="container-form sign-up" id="signupModal">
-       <!--  <div class="welcome-back">
-            <div class="message">
-               
-                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                <button class="sign-up-btn">Iniciar Sesion</button>
-            </div>
-        </div> -->
-        <form class="formulario" id="signup-form">
+    <div class="d-flex-center">
+        <form class="formulario" [formGroup]="bgForm" novalidate>
             <div>
                 <img [routerLink]="['/landing']" src="assets/img/TituloDOT.png" />
             </div>
@@ -19,45 +11,125 @@
             
             <p class="cuenta-gratis">Crea una cuenta para poder tener acceso a todas las funciones de Don´t Overthink</p>
             <div>
-                <input type="text" id="signup-email" class="form-control mb-3" placeholder="Correo electronico" required>
-            <input type="password" id="signup-password" class="form-control mb-3" placeholder="Contraseña" required>
-            <button [routerLink]="['/login']" type="submit" text="Iniciar Sesión" >Iniciar Sesión</button>
-            <button type="submit" text="Iniciar Sesión" >Registrarse</button>
-             </div>
+            <input type="text" formControlName="email" class="form-control mb-3" placeholder="Correo electronico" required>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+        *ngIf="this.bgForm.controls?.['email'].touched && this.bgForm.controls?.['email'].invalid">
+        <ion-text *ngIf="errorControl.email.errors?.required" class="errorInput" color="danger">Email is
+          required.</ion-text>
+        <ion-text *ngIf="errorControl.email.errors?.pattern" class="errorInput" color="danger">Please provide valid
+          email.</ion-text>
+      </div>
+            <input type="password" formControlName="password" class="form-control mb-3" placeholder="Contraseña" required>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+        *ngIf="this.bgForm.controls?.['password'].touched && this.bgForm.controls?.['password'].invalid">
+        <ion-text *ngIf="errorControl.password.errors?.required" class="errorInput" color="danger">Password is
+          required.</ion-text>
+        <ion-text *ngIf="errorControl.password.errors?.pattern" class="errorInput" color="danger">Password must be more than 8 length containing
+          at least one character.
+          at least one Capital letter.
+          at least one number.
+        </ion-text>
+      </div>
+            <button (click)="signUP()" type="submit" text="Iniciar Sesión" >Registrarse</button>
             
+            <ion-button color="light" (click)='this.signUpWithGoogle()'>
+              <ion-icon src="assets/icon/google.svg"></ion-icon>
+              <ion-text>Continue with Google</ion-text>
+            </ion-button>
+        
+              <div class="loginLink">
+                <p class="p">Already a memember? <a [routerLink]="['/login']" style="color: #FFC33F">Log in</a></p>
+              </div>
+            </div>
+        
+            <ion-fab *ngIf="ionicForm.valid" vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+              <ion-fab-button (click)="signUP()">
+                <ion-icon name="chevron-forward"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>>
         </form>
     </div>
-   <!--   <div class="container-form sign-in" id="signinModal">
-        <form class="formulario" id="login-form">
-            <h2 class="create-account">Iniciar Sesion</h2>
-            <div class="iconos">
-                <div class="border-icon" id="googleLogin">
-                    <i class='bx bxl-google'></i>
-                </div>
-                <div class="border-icon" id="githubLogin">
-                    <i class='bx bxl-github' ></i>
-                </div>
-                <div class="border-icon" id="facebookLogin">
-                    <i class='bx bxl-facebook-circle' ></i>
-                </div>
-            </div> 
-            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-            <input type="text" id="login-email" class="form-control mb-3" placeholder="Email" required>
-            <input type="password" id="login-password" class="form-control mb-3" placeholder="Contraseña" required>
-            <button type="submit" text="Iniciar Sesión" class="btn-close btn-close-white">Iniciar Sesión</button>
-        </form>
-        <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido de nuevo</h2>
-                <p>Si aun no tienes una cuenta por favor registrate aqui</p>
-                <button class="sign-in-btn">Registrarse</button>
-            </div>
-        </div>
-    </div> -->
 </body>
-    
-    
+       -->
+
+       <ion-content [fullscreen]="true">
+        <ion-header collapse="condense">
+          <ion-toolbar>
+            <ion-title size="large">Get strt</ion-title>
+          </ion-toolbar>
+        </ion-header>
       
-
-
-  
+        <div class="header">
+          <ion-title class="title" size="large">Get Started</ion-title>
+          <p class="subtitle">By creating an account</p>
+        </div>
+        <form [formGroup]="bgForm" novalidate>
+          <div class="ion-padding">
+            <ion-item >
+              <ion-input class="input" formControlName="fullname" placeholder="Fullname" />
+              <ion-icon slot="end" name="person-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['fullname'].touched && this.bgForm.controls?.['fullname'].invalid">
+              <ion-text *ngIf="errorControl.fullname.errors?.required" class="errorInput" color="danger">Fullname is
+                required.</ion-text>
+            </div>
+            <ion-item>
+              <ion-input class="input" formControlName="email" placeholder="email" />
+              <ion-icon slot="end" name="mail-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['email'].touched && this.bgForm.controls?.['email'].invalid">
+              <ion-text *ngIf="errorControl.email.errors?.required" class="errorInput" color="danger">Email is
+                required.</ion-text>
+              <ion-text *ngIf="errorControl.email.errors?.pattern" class="errorInput" color="danger">Please provide valid
+                email.</ion-text>
+            </div>
+            <ion-item>
+              <ion-input class="input" type="password" formControlName="password" placeholder="password" />
+              <ion-icon slot="end" name="lock-closed-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['password'].touched && this.bgForm.controls?.['password'].invalid">
+              <ion-text *ngIf="errorControl.password.errors?.required" class="errorInput" color="danger">Password is
+                required.</ion-text>
+              <ion-text *ngIf="errorControl.password.errors?.pattern" class="errorInput" color="danger">Password must be more than 8 length containing
+                at least one character.
+                at least one Capital letter.
+                at least one number.
+              </ion-text>
+            </div>
+            <ion-item>
+              <ion-input class="input" type="numeric" formControlName="contact" placeholder="contact" />
+              <ion-icon slot="end" name="call-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['contact'].touched && this.bgForm.controls?.['contact'].invalid">
+              <ion-text *ngIf="errorControl.contact.errors?.required" class="errorInput" color="danger">Contact is
+                required..</ion-text>
+                <ion-text *ngIf="errorControl.contact.errors?.pattern" class="errorInput" color="danger">Contact should contain only numbers..</ion-text>
+                <ion-text *ngIf="errorControl.contact.errors?.minlength" class="errorInput" color="danger">Contact should be less than 10 digit..</ion-text>
+          
+              </div>
+            <p>Or</p>
+            
+          <ion-button color="light" (click)='this.signUpWithGoogle()'>
+            <ion-icon src="assets/icon/google.svg"></ion-icon>
+            <ion-text>Continue with Google</ion-text>
+          </ion-button>
+      
+            <div class="loginLink">
+              <p class="p">Already a memember? <a [routerLink]="['/login']" style="color: #FFC33F">Log in</a></p>
+            </div>
+          </div>
+      
+          <ion-fab *ngIf="bgForm.valid" vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+            <ion-fab-button (click)="signUP()">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+         
+      
+        </form>
+      
+      </ion-content>
