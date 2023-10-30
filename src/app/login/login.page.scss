@@ -153,12 +153,9 @@ button{
 .sign-up.active {
     opacity: 0;
     visibility: hidden;
-}
- */
-*{
-    background-color: aqua;
-   
- }
+} */
+ 
+
 .input{
     font-weight: 300;
 }
@@ -181,6 +178,7 @@ ion-item {
     }
 }
 .signupLink{
+    padding-bottom: 6rem;
     display: flex;
     margin: auto;
     flex-direction: row;
@@ -213,7 +211,13 @@ ion-item {
     font-size: small;
     padding-top: -16px;
 }
-button{
+img{
+    width: 350px;
+    display: flex;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+button {
     margin: 80px;
     width:120px;
     padding: 1rem;
@@ -227,4 +231,4 @@ button{
     margin-top: 2rem;
     transition: all .3s ease-in;
     color: #fff;
-}
+} 

@@ -1,16 +1,51 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>location</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+
+    </ion-buttons>
+  
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      
+    </ion-buttons>
+    <ion-title class="tituloBg">Ubicación</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">location</ion-title>
-    </ion-toolbar>
-  </ion-header>
   
     <capacitor-google-map #map></capacitor-google-map>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/inicio']">
+          <ion-icon name="home"></ion-icon>
+          inicio
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/noticias']">
+          <ion-icon name="newspaper"></ion-icon>
+          noticias
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/tienda']">
+          <ion-icon name="cart"></ion-icon>
+          tienda
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/acerca']">
+          <ion-icon name="information"></ion-icon>
+          acerca
+        </ion-tab-button>
+        <ion-tab-button [routerLink]="['/contacto']">
+          <ion-icon name="call"></ion-icon>
+          contacto
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

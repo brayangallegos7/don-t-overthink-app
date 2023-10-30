@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { GoogleMap, Marker} from '@capacitor/google-maps'
+import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-location',
   templateUrl: './location.page.html',
@@ -10,7 +11,7 @@ export class LocationPage implements OnInit {
   @ViewChild('map')mapRef:ElementRef;
   map:GoogleMap;
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ionViewDidEnter(){
     this.createMap();

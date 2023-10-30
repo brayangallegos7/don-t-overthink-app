@@ -154,7 +154,12 @@ button{
     visibility: hidden;
 }
  */
-
+    img{
+        width: 350px;
+        display: flex;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
  .header{
     margin-top: 100px;
     margin-bottom: 80px;
@@ -225,4 +230,19 @@ ion-item {
         // border-radius: 10px;
         // margin-bottom: 16px;
     }
+}
+button {
+    margin: 80px;
+    width:120px;
+    padding: 1rem;
+    font-weight: 400;
+    background-color: #4a4aee;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-top: 2rem;
+    transition: all .3s ease-in;
+    color: #fff;
 }

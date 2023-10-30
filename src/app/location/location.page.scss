@@ -3,3 +3,108 @@ capacitor-google-map {
     width: 100%;
     height: 100%;
   }
+  
+ion-toolbar {
+  --background: white;
+  --color: black;
+  --min-height: 80px;
+  --padding-top: 5px;
+  --padding-bottom: 5px;
+}
+img{
+  width: 100%;
+  display: block;
+}
+.imgBg{
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+.contenedor{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card-header{
+  height: 200px;
+  width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+.card-title{
+  text-align: center;
+  margin: 0;
+}
+.card-description{
+  flex-grow: 1;
+}
+.card-header img{
+  border-radius: 10px;
+  height: 180px;
+}
+.card-body{
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+  padding: 20px 15px;
+  text-align: justify;
+  border: 1px solid #ccc;
+  height:50px ;
+}
+.btn{
+  display: block;
+  background-color: var(--secondary);
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+.tituloBg{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  font-size: x-large;
+  text-align:center;
+  color: white;
+}
+.tituloapp{
+  font-family: garena-bold;
+  font-size: 40px;
+  text-align:center;
+  color: black;
+}
+.subtituloapp{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  text-align:center;
+}
+ion-card-title{
+  font-family: garena-bold;
+  font-size: 20px;
+  text-align:left;
+  color: black;
+}
+ion-card-subtitle{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  text-align:left;
+}
+@media(min-width: 600px){
+  .contenedor{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:  10px;
+  }
+  .card{
+      display: flex;
+      flex-direction: column;
+  }
+  .card-body{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+  }
+}
