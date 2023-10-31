@@ -156,14 +156,7 @@ button{
 } */
  
 
-.input{
-    font-weight: 300;
-}
-ion-item {
-    background-image: url('/assets/img/fondologin.png');
-    border-radius: 10px;
-    margin-bottom: 16px;
-}
+
 .header{
     margin-top: 100px;
     margin-bottom: 80px;
@@ -177,25 +170,33 @@ ion-item {
         font-size: 2rem;
     }
 }
+.input{
+    font-weight: 300;
+}
+ion-item {
+    --background: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
 .signupLink{
-    padding-bottom: 6rem;
     display: flex;
-    margin: auto;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-  position: absolute;
+   justify-content: center;
+   margin: auto;
+    // transform: translateY(-50%);
+//   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   width: 80%;
+  top:20;
+//   margin: auto;  111
     .p{
         font-size: 0.9em;
     }
     a {
         text-decoration: none;
       }
-}
+    }
 .forgotpassword{
     display: flex;
     justify-content: flex-end;
@@ -205,6 +206,7 @@ ion-item {
         text-decoration: none;
       }
 }
+
 .errorInput{
     color: red;
     font-weight: 300;
@@ -218,9 +220,8 @@ img{
     padding-bottom: 3rem;
 }
 button {
-    margin: 80px;
-    width:120px;
     padding: 1rem;
+    width:120px;
     font-weight: 400;
     background-color: #4a4aee;
     border-radius: 2rem;
@@ -228,7 +229,7 @@ button {
     outline: none;
     cursor: pointer;
     font-size: .9rem;
-    margin-top: 2rem;
+    margin-bottom: 6rem;
     transition: all .3s ease-in;
     color: #fff;
 } 

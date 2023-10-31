@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'tienda', url: '/tienda/', icon: 'cart' },
     { title: 'acerca', url: '/acerca/', icon: 'information' },
     { title: 'contacto', url: '/contacto/', icon: 'call' },
+    { title: 'productos', url: '/productos/', icon: 'file-tray-stacked' },
   ];
  // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
