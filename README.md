@@ -4,9 +4,9 @@ Don´t Overthink
 
 ## Descripción
 La Aplicación Móvil es una aplicación innovadora diseñada para dar información y ayudar a las personas con problemas mentales. 
-Proporciona a los usuarios una buena experiencia a la hora de navegar en ella ya que es facil de usar y es agradable a la vista del usuario,
-Esta aplicación está construida en ionic en el lenguaje de programación de TypeScript apoyandose de el framework angular para desarrollador
-el frontend, nodeJs Para el backend y firebase para la base de datos.
+Proporciona a los usuarios una buena experiencia a la hora de navegar en ella ya que es facil de usar y es agradable a la vista.
+Esta aplicación está construida en ionic en el lenguaje de programación de TypeScript apoyandose de angular para el desarrollo
+del frontend, nodeJs Para el backend y firebase para la base de datos.
 
 ## Funcionalidades Clave
 
