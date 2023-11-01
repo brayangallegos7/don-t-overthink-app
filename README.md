@@ -46,7 +46,7 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 ## Problemas
 
-Si encuentras algún problema o tienes una sugerencia, por favor crea un informe de problema en el [panel de problemas](https://github.com/brayangallegos7/don-t-overthink-app/issues).
+Si encuentras algún problema o tienes una sugerencia, por favor crea un informe de problema en el (https://github.com/brayangallegos7/don-t-overthink-app/issues).
 
 
 ## Créditos
