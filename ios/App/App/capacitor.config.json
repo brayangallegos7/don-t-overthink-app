@@ -1,0 +1,8 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "don´t overthink app",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "https"
+	}
+}
