@@ -1,0 +1,62 @@
+
+ion-toolbar {
+    --background: white;
+    --color: black;
+    --min-height: 80px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+  }
+
+.tituloBg{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    text-align:center;
+    color: white;
+}
+
+.encabezado{
+   font-weight: bold;
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.button-guardar {
+    padding: 1rem;
+    width:120px;
+    font-weight: 400;
+    background-color: #5260ff;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transition: all .3s ease-in;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+} 
+
+.button-new{
+    padding: 1rem;
+    width:160px;
+    font-weight: 400;
+    background-color: #5260ff;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    transition: all .3s ease-in;
+    color: #fff;
+    margin-right: end;
+    margin-left: auto;
+    display: block;
+}

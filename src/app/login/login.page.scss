@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ input::placeholder {
   }
 .container-form {
     width: 90%;
-    height: 104vh;
+    height:90vh;
     display: flex;
     justify-content: space-around;
     transition:  all .5s ease-out;
@@ -66,19 +66,22 @@ button{
 }
 
 .formulario {
-    width: 400px;
-    padding: 1rem;
+    width: 300px;
+    padding: 4rem;
     margin: 2rem;
     background-color: rgb(51, 51, 51, 0.602);
     text-align: center;
 }
 
 .create-account {
-    padding: 2.7rem 0;
-    font-size: 1.7rem;
+    padding-top:  1rem;
+    padding-bottom:  1rem;
+    font-size: 1.7rem
 }
 
 .iconos {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     width: 200px;
     display: flex;
     justify-content: space-around;
@@ -150,4 +153,83 @@ button{
 .sign-up.active {
     opacity: 0;
     visibility: hidden;
+} */
+ 
+
+
+.header{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+
+    .subtitle{
+        color: gray;
+        font-size: 0.9rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
 }
+.input{
+    font-weight: 300;
+}
+ion-item {
+    --background: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+.signupLink{
+    display: flex;
+   justify-content: center;
+   margin: auto;
+    // transform: translateY(-50%);
+//   position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  top:20;
+//   margin: auto;  111
+    .p{
+        font-size: 0.9em;
+    }
+    a {
+        text-decoration: none;
+      }
+    }
+.forgotpassword{
+    display: flex;
+    justify-content: flex-end;
+    a {
+    font-weight: 400;
+    font-size: 0.8em;
+        text-decoration: none;
+      }
+}
+
+.errorInput{
+    color: red;
+    font-weight: 300;
+    font-size: small;
+    padding-top: -16px;
+}
+img{
+    width: 350px;
+    display: flex;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+button {
+    padding: 1rem;
+    width:120px;
+    font-weight: 400;
+    background-color: #4a4aee;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-bottom: 6rem;
+    transition: all .3s ease-in;
+    color: #fff;
+} 

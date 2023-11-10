@@ -11,7 +11,8 @@ export const environment = {
     authDomain: 'dont-overthink-app.firebaseapp.com',
     messagingSenderId: '756024542809',
   },
-  production: false
+  production: false,
+  mapsKey: 'AIzaSyAxCPVkBkEF7ueJYXGriaZ0WjDocBEF74Q',
 };
 
 /*

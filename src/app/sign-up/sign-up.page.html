@@ -1,63 +1,78 @@
-<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-<body>
-    <!-- <h2>Bienvenido a Don´t Overthink</h2> -->
-    <div class="container-form sign-up" id="signupModal">
-       <!--  <div class="welcome-back">
-            <div class="message">
-               
-                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                <button class="sign-up-btn">Iniciar Sesion</button>
-            </div>
-        </div> -->
-        <form class="formulario" id="signup-form">
-            <div>
-                <img [routerLink]="['/landing']" src="assets/img/TituloDOT.png" />
-            </div>
-            
-            <h2 class="create-account">Crear una cuenta</h2>
-            
-            <p class="cuenta-gratis">Crea una cuenta para poder tener acceso a todas las funciones de Don´t Overthink</p>
-            <div>
-                <input type="text" id="signup-email" class="form-control mb-3" placeholder="Correo electronico" required>
-            <input type="password" id="signup-password" class="form-control mb-3" placeholder="Contraseña" required>
-            <button [routerLink]="['/login']" type="submit" text="Iniciar Sesión" >Iniciar Sesión</button>
-            <button type="submit" text="Iniciar Sesión" >Registrarse</button>
-             </div>
-            
-        </form>
-    </div>
-   <!--   <div class="container-form sign-in" id="signinModal">
-        <form class="formulario" id="login-form">
-            <h2 class="create-account">Iniciar Sesion</h2>
-            <div class="iconos">
-                <div class="border-icon" id="googleLogin">
-                    <i class='bx bxl-google'></i>
-                </div>
-                <div class="border-icon" id="githubLogin">
-                    <i class='bx bxl-github' ></i>
-                </div>
-                <div class="border-icon" id="facebookLogin">
-                    <i class='bx bxl-facebook-circle' ></i>
-                </div>
-            </div> 
-            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-            <input type="text" id="login-email" class="form-control mb-3" placeholder="Email" required>
-            <input type="password" id="login-password" class="form-control mb-3" placeholder="Contraseña" required>
-            <button type="submit" text="Iniciar Sesión" class="btn-close btn-close-white">Iniciar Sesión</button>
-        </form>
-        <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido de nuevo</h2>
-                <p>Si aun no tienes una cuenta por favor registrate aqui</p>
-                <button class="sign-in-btn">Registrarse</button>
-            </div>
-        </div>
-    </div> -->
-</body>
-    
-    
+
+       <ion-content class="d-flex-center">
+        <ion-header collapse="condense">
+          <ion-toolbar>
+            <ion-title size="large"></ion-title>
+          </ion-toolbar>
+        </ion-header>
       
+        <div class="header">
+          <img [routerLink]="['/landing']" src="assets/img/TituloDOT.png" />
 
+          <ion-title class="title" size="large">Registrarse</ion-title>
+          <p class="subtitle">Crea una cuenta para acceder a todas las funcionalidades de Don´t Overthink</p>
+        </div>
+        <form [formGroup]="bgForm" novalidate>
+          <div class="ion-padding">
 
-  
+            <ion-item >
+              <ion-input class="input" formControlName="fullname" placeholder="Nombre de usuario" />
+              <ion-icon slot="end" name="person-outline"></ion-icon>
+            </ion-item>
+
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['fullname'].touched && this.bgForm.controls?.['fullname'].invalid">
+              <ion-text *ngIf="errorControl.fullname.errors?.required" class="errorInput" color="danger">Fullname is
+                required.</ion-text>
+            </div>
+            
+            <ion-item>
+              <ion-input class="input" formControlName="email" placeholder="Correo electronico" />
+              <ion-icon slot="end" name="mail-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['email'].touched && this.bgForm.controls?.['email'].invalid">
+              <ion-text *ngIf="errorControl.email.errors?.required" class="errorInput" color="danger">Correo requerido.</ion-text>
+              <ion-text *ngIf="errorControl.email.errors?.pattern" class="errorInput" color="danger">Ingrese un correo valido.</ion-text>
+            </div>
+            <ion-item>
+              <ion-input class="input" type="password" formControlName="password" placeholder="Contraseña" />
+              <ion-icon slot="end" name="lock-closed-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['password'].touched && this.bgForm.controls?.['password'].invalid">
+              <ion-text *ngIf="errorControl.password.errors?.required" class="errorInput" color="danger">Contraseña requerida.</ion-text>
+              <ion-text *ngIf="errorControl.password.errors?.pattern" class="errorInput" color="danger">Ingrese una contraseña valida.
+              </ion-text>
+            </div>
+            <ion-item>
+              <ion-input class="input" type="numeric" formControlName="contact" placeholder="Telefono" />
+              <ion-icon slot="end" name="call-outline"></ion-icon>
+            </ion-item>
+            <div style="padding-top: -26px;padding-bottom: 16px;"
+              *ngIf="this.bgForm.controls?.['contact'].touched && this.bgForm.controls?.['contact'].invalid">
+              <ion-text *ngIf="errorControl.contact.errors?.required" class="errorInput" color="danger">Telefono es requerido.</ion-text>
+                <ion-text *ngIf="errorControl.contact.errors?.pattern" class="errorInput" color="danger">Ingrese solamente numeros</ion-text>
+                <ion-text *ngIf="errorControl.contact.errors?.minlength" class="errorInput" color="danger">el telefono debe contener 10 numeros</ion-text>
+          
+              </div>
+          <!--   <p>Or</p> -->
+            
+          <!-- <ion-button color="light" (click)='this.signUpWithGoogle()'>
+            <ion-icon src="assets/icon/google.svg"></ion-icon>
+            <ion-text>Continue with Google</ion-text>
+          </ion-button> -->
+      
+            <div class="loginLink">
+              <p class="p">¿Ya tienes una cuenta? <a [routerLink]="['/login']" style="color: #5260ff">Iniciar sesión</a></p>
+            </div>
+          </div>
+      
+          <div *ngIf="bgForm.valid"  type="submit" style="text-align: center;">
+            <button (click)="signUP()" type="submit" >Registrarse</button>
+          </div>
+         
+      
+        </form>
+      
+      </ion-content>

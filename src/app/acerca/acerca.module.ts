@@ -8,6 +8,7 @@ import { AcercaPageRoutingModule } from './acerca-routing.module';
 
 import { AcercaPage } from './acerca.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,7 @@ import { AcercaPage } from './acerca.page';
     IonicModule,
     AcercaPageRoutingModule
   ],
-  declarations: [AcercaPage]
+  declarations: [AcercaPage],
+
 })
 export class AcercaPageModule {}
