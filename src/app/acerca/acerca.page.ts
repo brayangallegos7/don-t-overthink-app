@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acerca',
@@ -7,10 +9,16 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class AcercaPage implements OnInit {
 
-  
+  constructor(private authenticationService:AuthenticationService,private router: Router) { }
    
 
   ngOnInit() {
   }
+  
+  signOut(){
 
+    this.authenticationService.signOut().then(() =>{
+      this.router.navigate(['/landing'])
+    })
+   }
 }

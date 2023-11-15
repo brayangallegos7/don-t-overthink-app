@@ -12,7 +12,10 @@ import { ToastController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
   bgForm:FormGroup ;
-  constructor(public toastController: ToastController, public alertController: AlertController, public loadingController: LoadingController, public authenticationService: AuthenticationService, public router: Router, public formBuilder: FormBuilder) 
+
+  loading : any;
+  
+  constructor(public toastController: ToastController,public loadingCtrl: LoadingController, public alertController: AlertController, public loadingController: LoadingController, public authenticationService: AuthenticationService, public router: Router, public formBuilder: FormBuilder) 
    {
 
     }
@@ -35,8 +38,7 @@ export class LoginPage implements OnInit {
   }
 
   async login() {
-    const loading = await this.loadingController.create();
-    await loading.present();
+    this.showLoading();
     // console.log(this.email + this.password);
     if (this.bgForm.valid) {
 
@@ -44,11 +46,11 @@ export class LoginPage implements OnInit {
       const user = await this.authenticationService.loginUser(this.bgForm.value.email, this.bgForm.value.password).catch((err) => {
         this.presentToast(err)
         console.log(err);
-        loading.dismiss();
+        this.loading.dismiss();
       })
 
       if (user) {
-        loading.dismiss();
+        this.loading.dismiss();
         this.router.navigate(['/inicio'])
       }
     } else {
@@ -70,6 +72,14 @@ export class LoginPage implements OnInit {
     });
 
     await toast.present();
+  }
+  
+  async showLoading() {
+    this.loading = await this.loadingCtrl.create({
+      message: 'Espere un momento..',
+    });
+
+    this.loading.present();
   }
   }
 

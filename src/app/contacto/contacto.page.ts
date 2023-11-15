@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoPage implements OnInit {
 
-  constructor() { }
+  constructor(private authenticationService:AuthenticationService,private router: Router) { }
 
   ngOnInit() {
   }
 
+  signOut(){
+
+    this.authenticationService.signOut().then(() =>{
+      this.router.navigate(['/landing'])
+    })
+   }
 }

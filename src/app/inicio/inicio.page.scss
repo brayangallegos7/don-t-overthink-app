@@ -75,6 +75,14 @@ ion-toolbar {
     font-style: italic;
     text-align:center;
   }
+  .footer{
+    font-family: garena;
+    font-weight: bold;
+    font-style: italic;
+    text-align:center;
+    font-size: 10px;
+    padding-top: 6rem; 
+  }
   ion-card-title{
     font-family: garena-bold;
     font-size: 20px;
@@ -102,4 +110,5 @@ ion-toolbar {
         display: flex;
         flex-direction: column;
     }
+ 
 }

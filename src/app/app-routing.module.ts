@@ -66,7 +66,12 @@ const routes: Routes = [
   {
     path: 'productos',
     loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
-  }
+  },
+ /*  {
+    path: 'googlemaps',
+    loadChildren: () => import('./googlemaps/googlemaps.module').then( m => m.GooglemapsPageModule)
+  } */
+
 
 ];
 

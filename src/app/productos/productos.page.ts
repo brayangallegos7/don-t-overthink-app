@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore.service';
 import { Producto } from '../models';
 import { AlertController, LoadingController, ToastController } from '@ionic/angular';
+import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,14 +21,16 @@ export class ProductosPage implements OnInit {
 
   enableNewProducto = false;
 
-  newImage= '';
   
   private path = 'Productos';
 
   constructor(public firestoreService: FirestoreService,
               public loadingCtrl: LoadingController,
               public toastController: ToastController,
-              public alertController: AlertController) { }
+              public alertController: AlertController,
+              private authenticationService:AuthenticationService,
+              private router: Router
+             ) { }
 
   ngOnInit() {
     this.getProductos();
@@ -52,7 +56,7 @@ export class ProductosPage implements OnInit {
       const alert = await this.alertController.create({
         cssClass: 'normal',
         header: 'Advertencia',
-        message: '¿Estas seguro de eliminar el producto?',
+        message: '¿Estás seguro de eliminar el producto?',
         buttons: [{
           text:'cancelar',
           role: 'cancel',
@@ -61,7 +65,7 @@ export class ProductosPage implements OnInit {
             console.log('confirm cancel: blah')
           } 
           },{ 
-          text:'Ok',
+          text:'Si',
           cssClass: 'normal',
           handler: (blah) =>{
             console.log('confirm okay');
@@ -109,13 +113,11 @@ export class ProductosPage implements OnInit {
     await toast.present();
   }
 
-  newImageUpload(event: any){
-    if (event.target.files && event.target.files[0]){
-      const reader = new FileReader();
-      reader.onload = ((image) =>{
-        this.newImage = image.target.result as string;
-      });
-      reader.readAsDataURL(event.target.files[0]);
-    }
+  signOut(){
+
+    this.authenticationService.signOut().then(() =>{
+      this.router.navigate(['/landing'])
+    })
+   }
   }
-}
+

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { GoogleMap, Marker} from '@capacitor/google-maps'
 import { ModalController } from '@ionic/angular';
+import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-location',
   templateUrl: './location.page.html',
@@ -11,7 +13,7 @@ export class LocationPage implements OnInit {
   @ViewChild('map')mapRef:ElementRef;
   map:GoogleMap;
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController,private authenticationService:AuthenticationService,private router: Router) { }
 
   ionViewDidEnter(){
     this.createMap();
@@ -51,7 +53,15 @@ export class LocationPage implements OnInit {
       await this.map.addMarkers(markers);
 
    }
+
+   signOut(){
+
+    this.authenticationService.signOut().then(() =>{
+      this.router.navigate(['/landing'])
+    })
+   }
   ngOnInit() {
   }
 
+  
 }
