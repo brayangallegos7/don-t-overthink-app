@@ -53,8 +53,8 @@
         <div class="header">
           <img [routerLink]="['/landing']" src="assets/img/TituloDOT.png" />
 
-          <ion-title class="title" size="large">Bienvenido de nuevo</ion-title>
-          <p class="subtitle">Inicia sesión para acceder a Don´t Overthink</p>
+          <ion-title class="title" size="large">Welcome back</ion-title>
+          <p class="subtitle">Sign in to access Don´t Overthink</p>
         </div>
         <form [formGroup]="bgForm"  novalidate>
           <div class="ion-padding">
@@ -66,8 +66,9 @@
             </ion-item>
           
             <div style="padding-top: -26px;padding-bottom: 16px;" *ngIf="this.bgForm.controls?.['email'].touched && this.bgForm.controls?.['email'].invalid">
-                <ion-text *ngIf="errorControl.email.errors?.required" class="errorInput" color="danger">Correo es requerido.</ion-text>
-                <ion-text *ngIf="errorControl.email.errors?.pattern" class="errorInput" color="danger">Ingrese un correo valido.</ion-text>
+                <ion-text *ngIf="errorControl.email.errors?.required" class="errorInput" color="danger">Email is required.</ion-text>
+                <ion-text *ngIf="errorControl.email.errors?.pattern" class="errorInput" color="danger">Enter a valid email
+                  .</ion-text>
             </div>
             
             <ion-item>
@@ -75,21 +76,21 @@
               <ion-icon name="lock-closed-outline"></ion-icon>
             </ion-item>
             <div style="padding-top: -26px;padding-bottom: 16px;" *ngIf="this.bgForm.controls?.['password'].touched && this.bgForm.controls?.['password'].invalid">
-                <ion-text *ngIf="errorControl.password.errors?.required" class="errorInput" color="danger">Contraseña es requerida.</ion-text>
-                <ion-text *ngIf="errorControl.password.errors?.pattern" class="errorInput"  color="danger">Ingrese una contraseña valida</ion-text>
+                <ion-text *ngIf="errorControl.password.errors?.required" class="errorInput" color="danger">Password is required.</ion-text>
+                <ion-text *ngIf="errorControl.password.errors?.pattern" class="errorInput"  color="danger">Enter a valid password.</ion-text>
             </div>
           
             <div class="forgotpassword">
-              <a [routerLink]="['/reset-password']" style="color: #5260ff">¿Olvidó su contraseña?</a>
+              <a [routerLink]="['/reset-password']" style="color: #5260ff">Forgot your password?</a>
             </div>
       
           </div>
            <div class="signupLink">
-            <p class="p">¿Nuevo miembro? <a [routerLink]="['/sign-up']" style="color: #5260ff">registrarse ahora</a></p>
+            <p class="p">New member?<a [routerLink]="['/sign-up']" style="color: #5260ff">Register now</a></p>
           </div> 
       
           <div *ngIf="bgForm.valid"  type="submit" style="text-align: center;">
-            <button (click)="login()" type="submit" >Iniciar Sesión</button>
+            <button (click)="login()" type="submit" >Sign in</button>
           </div>
      
           

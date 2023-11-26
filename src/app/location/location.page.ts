@@ -18,7 +18,6 @@ export class LocationPage implements OnInit {
   ionViewDidEnter(){
     this.createMap();
   }
-
    async createMap(){
     this.map = await GoogleMap.create({
       id: 'my-map', // Unique identifier for this map instance
@@ -37,7 +36,6 @@ export class LocationPage implements OnInit {
 
     this.addMarkers();
    }
-
    async addMarkers(){
       const markers: Marker []=[
         {

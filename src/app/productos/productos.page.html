@@ -9,7 +9,7 @@
     <ion-buttons slot="start">
       <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="tituloBg">Productos</ion-title>
+    <ion-title class="tituloBg">Products</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,12 +17,12 @@
 
 <ion-content class="d-flex-center">
   <ion-card>
-    <img class="imgBg" src="assets/img/tienda.jpg" />
+    <img class="imgBg" src="assets/img/almacen.png" />
   
   
     <ion-card-content>
       <div >
-        <button class="button-new" (click)="nuevo()" slotype="submit">Nuevo producto</button>
+        <button class="button-new" (click)="nuevo()" slotype="submit">New product</button>
       </div>
       
     
@@ -37,43 +37,45 @@
         </ion-item>
     
         <ion-card-header>
-          <ion-card-title class="cardTitle">Nueva mercancia</ion-card-title>
-          <ion-card-subtitle class="cardsubTitle">Ingrese los datos del nuevo producto</ion-card-subtitle>
+          <ion-card-title class="cardTitle">New merch</ion-card-title>
+          <ion-card-subtitle class="cardsubTitle">Enter the data of the new product</ion-card-subtitle>
           
         </ion-card-header>
         <ion-item>
           <ion-label class="normal" position="floating">
-            Nombre:
+            Name:
           </ion-label>
           <ion-input [(ngModel)]="newProducto.nombre" class="normal" type="text" inputmode="text"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label class="normal" position="floating">
-            Precio inicial:
+            Precio:
           </ion-label>
           <ion-input [(ngModel)]="newProducto.precioNormal" class="normal" type="text" type="number"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label class="normal" position="floating">
-            Precio descuento:
+            Discount price:
           </ion-label>
           <ion-input [(ngModel)]="newProducto.precioReducido" class="normal" type="text" type="number"></ion-input>
         </ion-item>
     
-        <button class="button-guardar" (click)="guardarProducto()" slotype="submit">Guardar</button>
+        <button class="button-guardar" (click)="guardarProducto()" slotype="submit">Save</button>
       </div>
     
       <ion-card-header>
-        <ion-card-title class="cardTitle">Almacen</ion-card-title>
-        <ion-card-subtitle class="cardsubTitle">Productos en existencia</ion-card-subtitle>
+        <ion-card-title class="cardTitle">Store</ion-card-title>
+        <ion-card-subtitle class="cardsubTitle">Products in stock</ion-card-subtitle>
         
       </ion-card-header>
     
       <ion-item  *ngFor="let producto of productos">
-        <ion-label class="normal">{{producto.nombre}}</ion-label>
-        
+        <ion-label class="normal">Producto: {{producto.nombre}}</ion-label>
+        <ion-label class="normal">Precio: $ {{producto.precioNormal}}</ion-label>
+        <ion-label class="normal">Precio C/Descuento: $ {{producto.precioReducido}}</ion-label>
+
         <ion-buttons slot="end">
           <ion-button (click)="newProducto = producto; enableNewProducto = true ">
             <ion-icon slot="icon-only" color="warning" name="create-sharp"></ion-icon>
@@ -92,13 +94,13 @@
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button>
-        <a href='https://www.facebook.com/'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
+        <a href='https://www.facebook.com/profile.php?id=61553919293374'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
       </ion-fab-button>
       <ion-fab-button>
-        <a href='https://www.youtube.com/'><ion-icon name="logo-youtube" style="color:red"></ion-icon></a>
+        <a href='https://www.instagram.com/dontoverthinkpj/'><ion-icon name="logo-instagram" style="color:hotpink"></ion-icon></a>
       </ion-fab-button>
       <ion-fab-button>
-        <a href='https://www.github.com/'><ion-icon name="logo-github" style="color:gray"></ion-icon></a>
+        <a href='https://www.linkedin.com/in/brayan-yahir-gallegos-estrada-2950aa273/'><ion-icon name="logo-linkedin" style="color:midnightblue"></ion-icon></a>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
@@ -109,23 +111,23 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button [routerLink]="['/inicio']">
           <ion-icon name="home"></ion-icon>
-          inicio
+          Home
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/noticias']">
           <ion-icon name="newspaper"></ion-icon>
-          noticias
+          News
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/acerca']">
           <ion-icon name="information"></ion-icon>
-          acerca
+          About Us
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/contacto']">
           <ion-icon name="call"></ion-icon>
-          contacto
+          Contacts
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/productos']">
           <ion-icon name="file-tray-stacked"></ion-icon>
-          productos
+          Products
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

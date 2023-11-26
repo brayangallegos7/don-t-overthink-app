@@ -65,7 +65,7 @@ ion-toolbar {
 }
 .tituloapp{
     font-family: garena-bold;
-    font-size: 40px;
+    font-size: 24px;
     text-align:center;
     color: black;
   }
@@ -74,6 +74,7 @@ ion-toolbar {
     font-weight: bold;
     font-style: italic;
     text-align:center;
+    font-size: 16px;
   }
   .footer{
     font-family: garena;
@@ -81,11 +82,11 @@ ion-toolbar {
     font-style: italic;
     text-align:center;
     font-size: 10px;
-    padding-top: 6rem; 
+    padding-top: 3rem; 
   }
   ion-card-title{
     font-family: garena-bold;
-    font-size: 20px;
+    font-size: 16px;
     text-align:left;
     color: black;
   }
@@ -94,6 +95,7 @@ ion-toolbar {
     font-weight: bold;
     font-style: italic;
     text-align:left;
+    font-size: 16px;
   }
 @media(min-width: 600px){
     .contenedor{

@@ -1,11 +1,60 @@
 
+ion-toolbar {
+  --background: white;
+  --color: black;
+  --min-height: 80px;
+  --padding-top: 5px;
+  --padding-bottom: 5px;
+}
+img{
+  width: 100%;
+  display: block;
+}
 .imgBg{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-};
-
-
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+.contenedor{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card-header{
+  height: 200px;
+  width: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+.card-title{
+  text-align: center;
+  margin: 0;
+}
+.card-description{
+  flex-grow: 1;
+}
+.card-header img{
+  border-radius: 10px;
+  height: 180px;
+}
+.card-body{
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+  padding: 20px 15px;
+  text-align: justify;
+  border: 1px solid #ccc;
+  height:50px ;
+}
+.btn{
+  display: block;
+  background-color: var(--secondary);
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
 .tituloBg{
   font-family: garena;
   font-weight: bold;
@@ -14,42 +63,54 @@
   text-align:center;
   color: white;
 }
+.tituloapp{
+  font-family: garena-bold;
+  font-size: 24px;
+  text-align:center;
+  color: black;
+}
+.subtituloapp{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  text-align:center;
+  font-size: 16px;
+}
+.footer{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  text-align:center;
+  font-size: 10px;
+  padding-top: 3rem; 
+}
+ion-card-title{
+  font-family: garena-bold;
+  font-size: 16px;
+  text-align:left;
+  color: black;
+}
+ion-card-subtitle{
+  font-family: garena;
+  font-weight: bold;
+  font-style: italic;
+  text-align:left;
+  font-size: 16px;
+}
+@media(min-width: 600px){
+  .contenedor{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:  10px;
+  }
+  .card{
+      display: flex;
+      flex-direction: column;
+  }
+  .card-body{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+  }
 
-ion-toolbar {
-    --background: white;
-    --color: black;
-  
-    --min-height: 80px;
-    --padding-top: 5px;
-    --padding-bottom: 5px;
-  }
-  .cardTitle{
-    font-family: garena-bold;
-    font-size: 40px;
-    text-align:center;
-    color: black;
-  }
-  .cardsubTitle{
-    font-family: garena;
-    font-weight: bold;
-    font-style: italic;
-    text-align: center;
-  }
-  ion-button:hover{
-    transform: scale(1.1);
-  }
-  img{
-    width: 50px;
-    height: 70px;
-  }
-  ion-label{
-    font-family: garena;
-    font-weight: bold;
-    font-style: italic;
-  }
-  ion-button{
-    font-family: garena;
-    font-weight: bold;
-    font-style: italic;
-  }
- 
+}

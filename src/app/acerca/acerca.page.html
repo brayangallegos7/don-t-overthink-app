@@ -9,7 +9,7 @@
     <ion-buttons slot="start">
       <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="tituloBg">acerca</ion-title>
+    <ion-title class="tituloBg">About Us</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,8 +23,8 @@
         item-start
         style="color:sienna">  
         </ion-icon>
-        Genero: 
-        <ion-badge item-end> Acción</ion-badge>
+      Gender: 
+        <ion-badge item-end>action</ion-badge>
       </ion-item>
       
       <ion-item>
@@ -33,7 +33,7 @@
       item-start
       style="color :orangered">  
       </ion-icon>
-      Niveles:
+      Levels:
       <ion-badge item-end>3</ion-badge>
       </ion-item>
       
@@ -43,7 +43,7 @@
       item-start
       style="color :rgb(53, 13, 13)">  
       </ion-icon>
-      Lanzamiento:
+      Launch:
       <ion-badge item-end>2024</ion-badge>
       </ion-item>
       
@@ -53,7 +53,7 @@
       item-start
       style="color : silver">  
       </ion-icon>
-      Plataforma de Desarrollo:
+      Development Platform:
       <ion-badge item-end>Unity 5</ion-badge>
       </ion-item>
       
@@ -64,7 +64,7 @@
       style="color :darksalmon">  
       </ion-icon>
       Edades:
-      <ion-badge item-end>+8</ion-badge>
+      <ion-badge item-end>+10</ion-badge>
       </ion-item>
       
       <ion-item>
@@ -83,7 +83,7 @@
       item-start
       style="color :deepskyblue">  
       </ion-icon>
-      Seguidores:
+      Followers:
       <ion-badge item-end>20k</ion-badge>
       </ion-item>
     </ion-card-header>
@@ -92,7 +92,7 @@
 
   <ion-card>
     <ion-card-title class="tituloapp">Don't Overthink</ion-card-title>
-      <ion-card-subtitle class="subtituloapp">Conoce mas acerca del equipo de Don´t Overthink</ion-card-subtitle>
+      <ion-card-subtitle class="subtituloapp">Learn more about the Don't Overthink team</ion-card-subtitle>
     <ion-card-header>
       <ion-chip [routerLink]="['/perfil-jd']">
         <ion-avatar>
@@ -100,7 +100,7 @@
         </ion-avatar>
         <ion-label>Juan Diego Gonzalez Miramontes</ion-label>
       </ion-chip>
-      <ion-card-subtitle  class="subtituloapp1">Desarrollador Front-end</ion-card-subtitle>
+      <ion-card-subtitle  class="subtituloapp1">Developer Front-end</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
 
@@ -112,7 +112,7 @@
         </ion-avatar>
         <ion-label>Brayan Yahir Gallegos Estrada</ion-label>
       </ion-chip>
-      <ion-card-subtitle class="subtituloapp1">Desarrollador Full-Stack</ion-card-subtitle>
+      <ion-card-subtitle class="subtituloapp1">Developer Full-Stack</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
 
@@ -124,7 +124,7 @@
         </ion-avatar>
         <ion-label>Julian Carrillo Mayorga </ion-label>
       </ion-chip>
-      <ion-card-subtitle class="subtituloapp1">Lider de Proyecto</ion-card-subtitle>
+      <ion-card-subtitle class="subtituloapp1">Manager</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
 
@@ -136,9 +136,10 @@
         </ion-avatar>
         <ion-label> Jose de Jesus Trasloscheros</ion-label>
       </ion-chip>
-      <ion-card-subtitle  class="subtituloapp1">Desarrollador Backend</ion-card-subtitle>
+      <ion-card-subtitle  class="subtituloapp1">Tester</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
+
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
@@ -146,13 +147,13 @@
     </ion-fab-button>
     <ion-fab-list side="top">
       <ion-fab-button>
-        <a href='https://www.facebook.com/'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
+        <a href='https://www.facebook.com/profile.php?id=61553919293374'><ion-icon name="logo-facebook" style="color:dodgerblue"></ion-icon></a>
       </ion-fab-button>
       <ion-fab-button>
-        <a href='https://www.youtube.com/'><ion-icon name="logo-youtube" style="color:red"></ion-icon></a>
+        <a href='https://www.instagram.com/dontoverthinkpj/'><ion-icon name="logo-instagram" style="color:hotpink"></ion-icon></a>
       </ion-fab-button>
       <ion-fab-button>
-        <a href='https://www.github.com/'><ion-icon name="logo-github" style="color:gray"></ion-icon></a>
+        <a href='https://www.linkedin.com/in/brayan-yahir-gallegos-estrada-2950aa273/'><ion-icon name="logo-linkedin" style="color:midnightblue"></ion-icon></a>
       </ion-fab-button>
       <ion-fab-button>
         <a [routerLink]="['/location']"><ion-icon name="logo-google" style="color:gray"></ion-icon></a>
@@ -168,23 +169,23 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button [routerLink]="['/inicio']">
           <ion-icon name="home"></ion-icon>
-          inicio
+          Home
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/noticias']">
           <ion-icon name="newspaper"></ion-icon>
-          noticias
+          News
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/acerca']">
           <ion-icon name="information"></ion-icon>
-          acerca
+          Abous Us
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/contacto']">
           <ion-icon name="call"></ion-icon>
-          contacto
+          Contact
         </ion-tab-button>
         <ion-tab-button [routerLink]="['/productos']">
           <ion-icon name="file-tray-stacked"></ion-icon>
-          productos
+          Products
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
